@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="price.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<div>
+  <h1>時給計算ページ</h1>
+  <%= form_with local: true do |f| %>
+  <div>時給を入力してください</div>
+  <div>
+    <%= f.text_field :job_price, class:"price-input", id:"job-price", placeholder:"例）790" %>
+  </div>
+  <div>1日の勤務時間を入力してください</div>
+  <div>
+    <%= f.text_field :work_time, class:"time-input", id:"work-time", placeholder:"例）8" %>
+  </div>
+    <div>月の出勤回数を入力してください</div>
+  <div>
+    <%= f.text_field :work_days, class:"work-input", id:"work-days", placeholder:"例）22" %>
+  </div>
+  <div class="prices-content">
+    <div class="price-content">
+      <span>日給</span>
+      <span>
+        <span id='one-day-price'></span>円
+      </span>
+    </div>
+    <div class="price-content">
+      <span>月給</span>
+      <span>
+        <span id='one-month-price'></span>円
+      </span>
+    </div>
+    <div class="price-content">
+      <span>年収</span>
+      <span>
+        <span id='one-year-price'></span>円
+      </span>
+    </div>
+  </div>
+  <% end %>
+</div>
+</body>
+</html>
