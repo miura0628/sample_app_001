@@ -1,0 +1,9 @@
+.prices-content{
+  width: 200px;
+}
+
+.price-content {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
